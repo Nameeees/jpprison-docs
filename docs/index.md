@@ -1,6 +1,4 @@
 <div class="jpp-hero" markdown>
-<img src="assets/jpprison-logo.jpg" class="jpp-logo" alt="JPPrison logo">
-
 # JPPrison
 
 <p class="jpp-tagline">Mine. Upgrade. Prestige. Repeat.</p>
