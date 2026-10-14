@@ -189,23 +189,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (quit/reload/shutdown) still pay the rolled reward offline. New
   `features.crates` master switch (`config.yml` v17), `crates.*` messages
   (v57), `crates/` included in backups, admin reference added to `/guide`.
-- **Enchant Creator tool** (`tools/enchant-creator.html`): standalone offline
-  editor for the `enchants/` folder, beginner-friendly by default. A five-step
-  wizard (35 idea cards, name + searchable icon gallery, live sliders with an
-  in-game item preview and a plain-language effect description, auto-generated
-  prestige ladder, review & save) lets anyone create an enchant without
-  knowing YAML or the server; the shell and wizard are bilingual EN/ES. A
-  **3D mine editor** renders the voxel mine and plays the exact break pattern
-  of the selected effect (orbit/zoom/click to set the trigger; fullscreen
-  mode with a timeline scrubber, playback speed and block material), and a
-  free builder combines any mining effect with passive multipliers, classic
-  enchantments, fixed-id specials, commands, FX and head skins. Fixed-id
-  behaviors (blessed, key-all, lucky, momentum, greed, potions...) are marked
-  UNIQUE and open the existing enchant instead of cloning a dead copy. An
-  Advanced tab keeps the full form, prestige/momentum tables and raw YAML for
-  power users. Keeps file comments when saving, writes directly to
-  `plugins/JPPrison` in Chromium or downloads files/ZIP elsewhere, and backs
-  up the folder before bulk saves.
 - **Pickaxe level-up notification toggle**: the pickaxe settings menu now has
   a fifth switch (slot 15) that mutes the complete level-up notification —
   chat message, title and sound — per player. Stored in `chat-toggles.yml`

@@ -41,14 +41,6 @@ Everything is data-driven: enchants, economies, menus, pets, bombs, drills, mini
 
     [:octicons-arrow-right-24: API](developer/api.md)
 
--   :material-magic-staff: **Designing enchants?**
-
-    ---
-
-    The Enchant Creator: visual, offline, bilingual, no YAML needed.
-
-    [:octicons-arrow-right-24: Open the guide](tools/enchant-creator.md)
-
 </div>
 
 ## Highlights

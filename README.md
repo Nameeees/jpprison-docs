@@ -53,7 +53,6 @@ docs/                 all the content (Markdown)
   features.md         full system tour
   reference/          commands, placeholders
   developer/          API for add-on developers
-  tools/              enchant creator guide
   changelog.md        changelog
 .github/workflows/    automatic deployment to GitHub Pages
 ```

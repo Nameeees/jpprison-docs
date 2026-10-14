@@ -14,7 +14,7 @@ You never need to delete a config to "get the new options": update the jar, run 
 
 !!! tip "Editing tips"
     - The files are documented inline — every section and key has a comment (ASCII-only comments, UTF-8 values).
-    - Use `/jpprison economy` (in-game creator) and the [Enchant Creator](../tools/enchant-creator.md) (offline tool) to generate valid files without touching YAML.
+    - Use `/jpprison economy` (in-game wizard) to create new economies without touching YAML.
     - `messages.yml` is **chat only**; menu titles, button names and lore live in `menus/`.
 
 ## Feature flags (master switches)

@@ -86,9 +86,7 @@ nav:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
-  - Features:
-      - Overview: features.md
-      - Enchant Creator: tools/enchant-creator.md
+  - Features: features.md
   - Reference:
       - Commands: reference/commands.md
       - Placeholders: reference/placeholders.md
