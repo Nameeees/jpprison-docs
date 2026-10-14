@@ -1,20 +1,215 @@
-/* ------------------------------------------------------------------
-   JPPrison Docs — small style tweaks on top of MkDocs Material
-   ------------------------------------------------------------------ */
+/* =====================================================================
+   JPPrison Docs — custom theme
+   Pure black + dark red, colors sampled from the JPPrison (JPP) logo.
+   All the palette lives in the two blocks below — tweak freely.
+   ===================================================================== */
 
-/* Keep the dense reference tables readable */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&display=swap');
+
+/* ---------- JPPrison tokens ----------------------------------------- */
+:root {
+  --jpp-black:      #000000;
+  --jpp-bg:         #0b0b0d;
+  --jpp-card:       #120e10;
+  --jpp-border:     #2a1214;
+  --jpp-red-hot:    #ff5040;   /* glow / hover               */
+  --jpp-red:        #d3352f;   /* main accent (logo letters) */
+  --jpp-red-deep:   #8f1c16;
+  --jpp-red-darker: #5a100c;
+  --jpp-text:       #ece8e6;
+}
+
+/* ---------- Material variable overrides (dark scheme) --------------- */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:           var(--jpp-black);
+  --md-primary-fg-color--light:    #111114;
+  --md-primary-fg-color--dark:     var(--jpp-black);
+  --md-accent-fg-color:            var(--jpp-red);
+
+  --md-default-bg-color:           var(--jpp-bg);
+  --md-default-fg-color:           var(--jpp-text);
+  --md-default-fg-color--light:    rgba(236, 232, 230, 0.72);
+  --md-default-fg-color--lighter:  rgba(236, 232, 230, 0.45);
+  --md-default-fg-color--lightest: rgba(236, 232, 230, 0.07);
+
+  --md-typeset-a-color:            #ff5a4d;
+  --md-code-bg-color:              #150a0c;
+  --md-code-fg-color:              #ffd9d4;
+
+  --md-footer-bg-color:            #050506;
+  --md-footer-bg-color--dark:      #030304;
+}
+
+/* ---------- header / tabs ------------------------------------------- */
+.md-header {
+  background: var(--jpp-black);
+  border-bottom: 1px solid rgba(211, 53, 47, 0.45);
+}
+.md-header__title {
+  font-family: 'Chakra Petch', 'Inter', sans-serif;
+  letter-spacing: 0.4px;
+}
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(255, 80, 64, 0.35);
+}
+.md-tabs {
+  background: #050506;
+  border-bottom: 1px solid rgba(143, 28, 22, 0.5);
+}
+
+/* ---------- typography ---------------------------------------------- */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Chakra Petch', 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+.md-typeset h1 {
+  background: linear-gradient(180deg, #ff6a58 0%, #c22a22 55%, #8f1c16 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.md-typeset .headerlink {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease;
+  background: none;
+  -webkit-text-fill-color: var(--jpp-red-hot);
+}
+.md-typeset :is(h1, h2, h3, h4):hover .headerlink {
+  visibility: visible !important;
+  opacity: 0.8 !important;
+}
+.md-typeset h2 {
+  border-left: 3px solid var(--jpp-red);
+  padding-left: 0.6em;
+}
+
+/* ---------- links / selection / scrollbars -------------------------- */
+.md-typeset a { transition: color 0.15s ease; }
+.md-typeset a:hover { color: var(--jpp-red-hot); }
+
+::selection { background: rgba(211, 53, 47, 0.5); color: #ffffff; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--jpp-red-darker) var(--jpp-bg); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--jpp-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--jpp-red-darker);
+  border-radius: 6px;
+  border: 2px solid var(--jpp-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--jpp-red-deep); }
+
+/* ---------- home hero ------------------------------------------------ */
+.jpp-hero {
+  text-align: center;
+  padding: 0.9rem 0 1.1rem;
+  background: radial-gradient(ellipse 62% 70% at 50% 32%, rgba(143, 28, 22, 0.14), transparent 70%);
+  border-radius: 18px;
+}
+.jpp-hero img.jpp-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 24px;
+  box-shadow:
+    0 0 55px rgba(255, 80, 64, 0.28),
+    0 0 18px rgba(143, 28, 22, 0.6),
+    0 0 0 1px rgba(255, 80, 64, 0.22);
+}
+.jpp-hero h1 { font-size: 3rem; margin: 0.7rem 0 0.1rem; }
+.jpp-tagline {
+  color: #d9b4ae !important;
+  letter-spacing: 0.8px;
+  font-size: 1.02rem;
+  margin: 0;
+}
+.jpp-chips { margin: 0.65rem 0 0; }
+.jpp-chip {
+  display: inline-block;
+  margin: 0.16rem 0.2rem;
+  padding: 0.27rem 0.8rem;
+  border: 1px solid #3a1418;
+  border-radius: 999px;
+  background: #140d0f;
+  color: #e6c9c4;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.jpp-chip--hot {
+  border-color: #7c1a16;
+  background: #1d0d0e;
+  color: #ffd2cb;
+  box-shadow: 0 0 14px rgba(255, 80, 64, 0.18);
+}
+
+/* ---------- cards ----------------------------------------------------- */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--jpp-border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #151013 0%, #0d0a0c 100%);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: #a3221c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55), 0 0 24px rgba(255, 80, 64, 0.12);
+}
+.md-typeset .grid.cards hr { border-color: var(--jpp-border); }
+
+/* ---------- tables ----------------------------------------------------- */
 .md-typeset table:not([class]) {
   font-size: 0.76rem;
+  border: 1px solid var(--jpp-border);
+}
+.md-typeset table:not([class]) th {
+  background: #190b0d;
+  color: #ff9d90;
+  border-bottom: 1px solid #3a1418;
+}
+.md-typeset table:not([class]) td { border-top: 1px solid #1c1013; }
+.md-typeset table:not([class]) tbody tr:nth-child(2n) {
+  background: rgba(255, 255, 255, 0.015);
+}
+.md-typeset table:not([class]) tbody tr:hover {
+  background: rgba(211, 53, 47, 0.07);
+}
+.md-typeset table:not([class]) td code,
+.md-typeset table:not([class]) th code {
+  white-space: nowrap;
 }
 
-/* Long placeholders / command names wrap instead of overflowing */
-.md-typeset code {
-  word-break: break-word;
+/* ---------- search ------------------------------------------------------ */
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--jpp-border);
+  border-radius: 8px;
+}
+.md-search__form:hover { background-color: rgba(255, 255, 255, 0.1); }
+.md-search__input { color: var(--jpp-text); }
+.md-search__input::placeholder { color: rgba(236, 232, 230, 0.55); }
+.md-search__icon { color: rgba(236, 232, 230, 0.75); }
+
+/* ---------- code -------------------------------------------------------- */
+.md-typeset code { border-radius: 6px; }
+.md-typeset .highlight {
+  border: 1px solid var(--jpp-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.md-typeset .highlight > pre > code { border: none; }
+.md-typeset kbd {
+  background: #1a0d0f;
+  border: 1px solid #3a1418;
+  border-radius: 5px;
+  color: #ffd2cb;
 }
 
-/* Slightly wider content column on large screens (big tables) */
-@media screen and (min-width: 76.25em) {
-  .md-grid {
-    max-width: 68rem;
-  }
-}
+/* ---------- footer ------------------------------------------------------ */
+.md-footer { border-top: 1px solid rgba(143, 28, 22, 0.45); }

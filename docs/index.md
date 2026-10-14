@@ -1,6 +1,17 @@
+<div class="jpp-hero" markdown>
+<img src="assets/jpprison-logo.jpg" class="jpp-logo" alt="JPPrison logo">
+
 # JPPrison
 
-**Mine. Upgrade. Prestige. Repeat.**
+<p class="jpp-tagline">Mine. Upgrade. Prestige. Repeat.</p>
+
+<p class="jpp-chips">
+<span class="jpp-chip">Minecraft 1.8.8 → latest</span>
+<span class="jpp-chip">Java 8+</span>
+<span class="jpp-chip">No NMS · no required dependencies</span>
+<span class="jpp-chip jpp-chip--hot">Free with attribution</span>
+</p>
+</div>
 
 An all-in-one Prison core plugin: enchanted pickaxes, multiple economies, autosell, pets, minions, robots, bombs, drills, loot chests, crates, boost armors, prestige, combos and more — in a single jar that runs from **Minecraft 1.8.8 to the latest release**, with no NMS and no required dependencies.
 
@@ -32,7 +43,7 @@ Everything is data-driven: enchants, economies, menus, pets, bombs, drills, mini
 
     [:octicons-arrow-right-24: API](developer/api.md)
 
--   :material-wand: **Designing enchants?**
+-   :material-magic-staff: **Designing enchants?**
 
     ---
 

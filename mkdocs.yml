@@ -28,9 +28,12 @@ copyright: JPPrison by MrDriz_ — Mine. Upgrade. Prestige. Repeat. Free with at
 
 theme:
   name: material
-  logo: assets/logo.svg
-  favicon: assets/logo.svg
+  logo: assets/jpprison-logo.jpg
+  favicon: assets/favicon.png
   language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.tabs
     - navigation.sections
@@ -42,25 +45,12 @@ theme:
     - content.code.copy
     - content.code.annotate
     - toc.follow
+  # Dark-only theme: pure black + dark red (JPPrison identity, colors
+  # sampled from the JPP logo).
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: deep purple
-      accent: amber
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: deep purple
-      accent: amber
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+    scheme: slate
+    primary: black
+    accent: red
 
 plugins:
   - search

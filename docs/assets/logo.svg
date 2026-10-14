@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Faceted diamond (aqua) matching the JPPrison startup banner -->
-  <path d="M32 5 L57 25 L32 53 L7 25 Z" fill="#26b8d0"/>
-  <path d="M32 5 L57 25 L32 33 Z" fill="#9feaf5"/>
-  <path d="M32 33 L57 25 L32 53 Z" fill="#1e93ab"/>
-  <path d="M32 5 L7 25 L32 33 Z" fill="#6fdcee"/>
-  <path d="M32 33 L7 25 L32 53 Z" fill="#167f95"/>
-  <circle cx="23" cy="16.5" r="2.4" fill="#ffffff" opacity="0.9"/>
-</svg>

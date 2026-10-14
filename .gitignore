@@ -13,3 +13,6 @@ Thumbs.db
 
 # Local screenshots (kept out of the public repo; root-level only)
 /Captura de pantalla*.png
+
+# Original logo upload (the site uses docs/assets/jpprison-logo.jpg)
+/138902.jpg
