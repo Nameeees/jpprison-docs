@@ -32,27 +32,23 @@
   --jpp-red-darker:  #5a100c;
   --jpp-text:        #ece8e6;
   --jpp-display:     'Chakra Petch', 'Inter', sans-serif;
-  --jpp-glow:        0 0 26px rgba(255, 80, 64, 0.16);
   --jpp-grid-line:   rgba(255, 255, 255, 0.02);
 }
 
 /* ---------- 02. base + page background -------------------------------- */
-/* Faint engineering grid + red ambience, fixed so the page scrolls over it. */
+/* Faint engineering grid, fixed so the page scrolls over it. */
 body {
   background-color: var(--jpp-bg);
   background-image:
     linear-gradient(var(--jpp-grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--jpp-grid-line) 1px, transparent 1px),
-    radial-gradient(1100px 560px at 50% -220px, rgba(143, 28, 22, 0.30), transparent 68%),
-    radial-gradient(900px 520px at 110% 38%, rgba(211, 53, 47, 0.07), transparent 62%),
-    radial-gradient(820px 560px at -12% 76%, rgba(90, 16, 12, 0.16), transparent 62%);
-  background-size: 44px 44px, 44px 44px, auto, auto, auto;
+    linear-gradient(90deg, var(--jpp-grid-line) 1px, transparent 1px);
+  background-size: 44px 44px, 44px 44px;
   background-attachment: fixed;
 }
 
 /* ---------- 03. header + tabs ----------------------------------------- */
 .md-header {
-  background: linear-gradient(180deg, #0a0a0c 0%, #050506 100%);
+  background: #09090b;
   border-bottom: 1px solid rgba(211, 53, 47, 0.32);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
@@ -64,7 +60,6 @@ body {
 .md-header__button.md-logo img,
 .md-nav__button.md-logo img {
   border-radius: 8px;
-  box-shadow: 0 0 0 1px rgba(255, 80, 64, 0.4), 0 0 14px rgba(255, 80, 64, 0.3);
 }
 
 .md-tabs {
@@ -90,7 +85,6 @@ body {
 .md-tabs__item--active .md-tabs__link {
   color: var(--jpp-red-hot);
   opacity: 1;
-  text-shadow: 0 0 16px rgba(255, 80, 64, 0.5);
 }
 .md-tabs__item--active::after {
   content: "";
@@ -100,8 +94,7 @@ body {
   bottom: 0;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, transparent, var(--jpp-red-hot), transparent);
-  box-shadow: 0 0 12px rgba(255, 80, 64, 0.8);
+  background: var(--jpp-red-hot);
 }
 .md-tabs__scroll-button {
   background: #070708;
@@ -140,10 +133,7 @@ body {
   letter-spacing: 0.3px;
 }
 .md-typeset h1 {
-  background: linear-gradient(180deg, #ff8577 0%, #ce332c 52%, #7e150f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e0453c;
   font-weight: 700;
 }
 .md-typeset .headerlink {
@@ -151,7 +141,7 @@ body {
   opacity: 0 !important;
   transition: opacity 0.2s ease;
   background: none;
-  -webkit-text-fill-color: var(--jpp-red-hot);
+  color: var(--jpp-red-hot);
 }
 .md-typeset :is(h1, h2, h3, h4):hover .headerlink {
   visibility: visible !important;
@@ -177,7 +167,7 @@ body {
 .md-typeset hr {
   height: 1px;
   border: 0;
-  background: linear-gradient(90deg, transparent, rgba(211, 53, 47, 0.55), transparent);
+  background: var(--jpp-border);
   margin: 1.8rem 0;
 }
 
@@ -225,20 +215,17 @@ body {
   background: rgba(211, 53, 47, 0.15);
   border-color: var(--jpp-red);
   color: #ffffff;
-  box-shadow: var(--jpp-glow);
   transform: translateY(-1px);
 }
 .md-typeset .md-button--primary {
-  background: linear-gradient(180deg, #e2453c 0%, #8f1c16 100%);
-  border-color: #ff5040;
+  background: #c22a22;
+  border-color: #c22a22;
   color: #ffffff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-  box-shadow: 0 6px 18px rgba(143, 28, 22, 0.45);
 }
 .md-typeset .md-button--primary:hover,
 .md-typeset .md-button--primary:focus {
-  background: linear-gradient(180deg, #f05147 0%, #a3221c 100%);
-  box-shadow: 0 8px 26px rgba(255, 80, 64, 0.35);
+  background: #d3352f;
+  border-color: #d3352f;
 }
 .md-button .twemoji svg {
   width: 0.95em;
@@ -254,10 +241,8 @@ body {
   margin: 0 0 1.1rem;
   border: 1px solid var(--jpp-border);
   border-radius: 20px;
-  background:
-    radial-gradient(ellipse 62% 88% at 50% -8%, rgba(211, 53, 47, 0.20), transparent 70%),
-    linear-gradient(180deg, #120c0f 0%, #0a080a 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 22px 50px rgba(0, 0, 0, 0.45);
+  background: #110d0f;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 .jpp-hero::before {
   content: "";
@@ -271,16 +256,6 @@ body {
   mask-image: radial-gradient(ellipse 75% 85% at 50% 30%, #000 26%, transparent 74%);
   pointer-events: none;
 }
-.jpp-hero::after {
-  content: "";
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 80, 64, 0.7), transparent);
-  pointer-events: none;
-}
 .jpp-hero > * {
   position: relative;
   z-index: 1;
@@ -292,19 +267,6 @@ body {
   height: 84px;
   border-radius: 20px;
   border: 1px solid rgba(255, 80, 64, 0.45);
-  box-shadow: 0 0 0 6px rgba(211, 53, 47, 0.07), 0 0 30px rgba(255, 80, 64, 0.32);
-  animation: jpp-crest 5s ease-in-out infinite;
-}
-@keyframes jpp-crest {
-  0%, 100% {
-    box-shadow: 0 0 0 6px rgba(211, 53, 47, 0.07), 0 0 24px rgba(255, 80, 64, 0.26);
-  }
-  50% {
-    box-shadow: 0 0 0 9px rgba(211, 53, 47, 0.10), 0 0 42px rgba(255, 80, 64, 0.42);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .jpp-hero__crest { animation: none; }
 }
 
 .jpp-kicker {
@@ -346,7 +308,6 @@ body {
 .jpp-chip--hot {
   border-color: #7c1a16;
   color: #ffd2cb;
-  box-shadow: 0 0 16px rgba(255, 80, 64, 0.18), inset 0 0 12px rgba(255, 80, 64, 0.05);
 }
 .jpp-cta {
   margin: 1.1rem 0 0.2rem !important;
@@ -371,7 +332,7 @@ body {
   border-radius: 14px;
   padding: 0.95rem 0.8rem;
   text-align: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.016), rgba(255, 255, 255, 0));
+  background: rgba(255, 255, 255, 0.015);
   transition: border-color 0.18s ease, transform 0.18s ease;
 }
 .jpp-stat:hover {
@@ -384,10 +345,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.1;
-  background: linear-gradient(180deg, #ff8a7c 0%, #c22a22 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e0453c;
 }
 .jpp-stat span {
   display: block;
@@ -404,7 +362,7 @@ body {
   overflow: hidden;
   margin: 1.1rem 0 1.6rem;
   background: #050506;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 80, 64, 0.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 .jpp-term__bar {
   display: flex;
@@ -418,10 +376,8 @@ body {
   width: 0.56rem;
   height: 0.56rem;
   border-radius: 50%;
+  background: #2e2e33;
 }
-.jpp-term__bar i:nth-child(1) { background: #5a100c; }
-.jpp-term__bar i:nth-child(2) { background: #8f1c16; }
-.jpp-term__bar i:nth-child(3) { background: #d3352f; }
 .jpp-term__bar b {
   margin-left: 0.55rem;
   font-family: var(--jpp-display);
@@ -460,39 +416,22 @@ body {
   gap: 0.6rem;
 }
 .md-typeset .grid.cards > ul > li {
-  position: relative;
-  overflow: hidden;
   border: 1px solid var(--jpp-border);
   border-radius: 16px;
   padding: 1.05rem 1.15rem 0.95rem;
-  background:
-    radial-gradient(130% 100% at 50% 0%, rgba(211, 53, 47, 0.05), transparent 58%),
-    linear-gradient(180deg, #141013 0%, #0d0a0c 100%);
+  background: #120f12;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-}
-.md-typeset .grid.cards > ul > li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 80, 64, 0), transparent);
-  transition: background 0.25s ease;
 }
 .md-typeset .grid.cards > ul > li:hover {
   border-color: #9c1f19;
   transform: translateY(-3px);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.55), 0 0 28px rgba(255, 80, 64, 0.1);
-}
-.md-typeset .grid.cards > ul > li:hover::before {
-  background: linear-gradient(90deg, transparent, rgba(255, 80, 64, 0.85), transparent);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5);
 }
 .md-typeset .grid.cards hr {
   height: 1px;
   border: 0;
   margin: 0.65rem 0;
-  background: linear-gradient(90deg, rgba(211, 53, 47, 0.4), rgba(211, 53, 47, 0.06) 70%, transparent);
+  background: var(--jpp-border);
 }
 
 /* Card header: icon tile + title */
@@ -513,9 +452,8 @@ body {
   height: 2.05rem;
   border-radius: 10px;
   color: var(--jpp-red-hot);
-  background: linear-gradient(180deg, rgba(211, 53, 47, 0.24), rgba(143, 28, 22, 0.1));
+  background: rgba(211, 53, 47, 0.14);
   border: 1px solid #4a1210;
-  box-shadow: inset 0 0 12px rgba(255, 80, 64, 0.08);
 }
 .md-typeset .grid.cards > ul > li > p:first-child .twemoji svg {
   width: 1.05rem;
@@ -571,7 +509,7 @@ body {
   border: 1px solid var(--jpp-border-soft);
   border-radius: 14px;
   padding: 0.95rem 1rem 1rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.016), rgba(255, 255, 255, 0));
+  background: rgba(255, 255, 255, 0.015);
   transition: border-color 0.18s ease, transform 0.18s ease;
 }
 .jpp-step:hover {
