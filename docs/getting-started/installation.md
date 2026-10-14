@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Server** | Spigot or Paper, Minecraft **1.8.8 through the latest release**. One jar covers every version — no recompiling, no separate builds. |
+| **Server** | Spigot or Paper, Minecraft **1.8.8 through the latest release**. One jar covers every version. |
 | **Java** | Java 8 or newer. |
 | **Storage** | SQLite — bundled and configured out of the box (`data.db` in the plugin folder, WAL journal mode). |
 | **Required plugins** | None. |

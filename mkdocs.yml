@@ -92,8 +92,5 @@ nav:
   - Reference:
       - Commands: reference/commands.md
       - Placeholders: reference/placeholders.md
-  - Developer:
-      - Building & Development: developer/building.md
-      - API: developer/api.md
-      - Balance Analysis: developer/balance.md
+  - API: developer/api.md
   - Changelog: changelog.md

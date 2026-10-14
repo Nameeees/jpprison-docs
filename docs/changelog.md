@@ -205,9 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Advanced tab keeps the full form, prestige/momentum tables and raw YAML for
   power users. Keeps file comments when saving, writes directly to
   `plugins/JPPrison` in Chromium or downloads files/ZIP elsewhere, and backs
-  up the folder before bulk saves. A build-time test
-  (`EnchantCreatorSchemaTest`) keeps the tool schema in sync with the plugin's
-  enchant fields.
+  up the folder before bulk saves.
 - **Pickaxe level-up notification toggle**: the pickaxe settings menu now has
   a fifth switch (slot 15) that mutes the complete level-up notification —
   chat message, title and sound — per player. Stored in `chat-toggles.yml`
@@ -398,7 +396,7 @@ optional).
 ### Added
 
 - **Pickaxe enchants**: data-driven enchant files under `enchants/` (add new
-  enchants without recompiling), 35 bundled enchants, visual upgrade menu,
+  enchants without code changes), 35 bundled enchants, visual upgrade menu,
   per-enchant unlock levels, per-enchant prestige and activation FX/messages.
 - **Custom economies**: one YAML file per economy under `economies/` gives it
   a name, symbol, color, decimals, its own `/<id>` command, leaderboard and

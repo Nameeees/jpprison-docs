@@ -13,7 +13,7 @@
 
 An all-in-one Prison core plugin: enchanted pickaxes, multiple economies, autosell, pets, minions, robots, bombs, drills, loot chests, crates, boost armors, prestige, combos and more — in a single jar that runs from **Minecraft 1.8.8 to the latest release**, with no NMS and no required dependencies.
 
-Everything is data-driven: enchants, economies, menus, pets, bombs, drills, minions, upgrades, loot chests, crates and animations are defined in YAML files that you can edit — and reload with `/jpprison reload` — without touching code or recompiling.
+Everything is data-driven: enchants, economies, menus, pets, bombs, drills, minions, upgrades, loot chests, crates and animations are defined in YAML files that you can edit — and reload with `/jpprison reload` — without touching any code.
 
 <div class="grid cards" markdown>
 
@@ -79,7 +79,7 @@ Everything is data-driven: enchants, economies, menus, pets, bombs, drills, mini
 
 | | |
 |---|---|
-| **Server** | Spigot / Paper **1.8.8 through the latest release** — one jar, no recompiling per version. |
+| **Server** | Spigot / Paper **1.8.8 through the latest release** — one jar covers every version. |
 | **Java** | 8 or newer. |
 | **Storage** | SQLite (bundled, zero configuration). |
 | **Dependencies** | None required. |

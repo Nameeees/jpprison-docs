@@ -3,7 +3,7 @@
 `tools/enchant-creator.html` is a standalone, offline editor for your `enchants/` folder — open it in Chrome or Edge, click **Open plugin folder** and pick `plugins/JPPrison`. No add-ons, no server and no installation needed.
 
 !!! tip "Where to get it"
-    The tool ships in the plugin repository under `tools/enchant-creator.html`. You can keep it anywhere on your disk and open it any time.
+    The tool is a single HTML file (`tools/enchant-creator.html`). Keep it anywhere on your disk and open it any time.
 
 ## Beginner wizard (default tab)
 
@@ -54,6 +54,3 @@ Use it to fine-tune anything created with the wizard.
 - **Firefox / Safari / drag & drop**: read-only import + per-file download or a full ZIP export.
 - The tool backs up the whole folder to a ZIP before bulk saves.
 - After saving, run `/jpprison reload` in game to apply the changes.
-
-!!! note "The schema stays in sync"
-    A build-time test (`EnchantCreatorSchemaTest`) fails the build if a bundled enchant uses a field the tool does not know — the tool never silently loses options.

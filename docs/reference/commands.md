@@ -74,7 +74,7 @@ Top 10 of that economy (includes offline players, direct SQL).
 
 ### `/tokens` / `/gems` (alias `/token`)
 
-`plugin.yml` shortcuts for the `tokens` and `gems` economies. They are equivalent to a bare `/tokens` and `/gems` (balance). Any new economy creates its own `/<id>` automatically: no need to touch `plugin.yml` or recompile.
+`plugin.yml` shortcuts for the `tokens` and `gems` economies. They are equivalent to a bare `/tokens` and `/gems` (balance). Any new economy creates its own `/<id>` automatically: no further setup needed.
 
 ### `/blockstop`
 

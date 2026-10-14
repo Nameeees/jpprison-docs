@@ -1,6 +1,6 @@
 # Configuration
 
-Everything is edited in plain YAML inside `plugins/JPPrison/` and applied with `/jpprison reload` — nothing requires a recompile.
+Everything is edited in plain YAML inside `plugins/JPPrison/` and applied with `/jpprison reload` — no code involved.
 
 ## Versioned configuration & auto-migration
 

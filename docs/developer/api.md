@@ -1,6 +1,6 @@
 # Developer API
 
-JPPrison ships its integration surface inside the plugin jar — compile against `JPPrison.jar` as a `provided` dependency. All entry points below are **static, null-safe and never throw**: unknown ids, null players and missing plugins degrade gracefully instead of breaking your code.
+JPPrison ships its integration surface inside the plugin jar — compile your add-on against it. All entry points below are **static, null-safe and never throw**: unknown ids, null players and missing plugins degrade gracefully instead of breaking your code.
 
 ## Balance API — `com.jpprison.economy.JPPrisonAPI`
 
@@ -104,7 +104,7 @@ String name = JPPrisonAPI.getWorldGuardFlagName();  // "jpprison-enchants"
 
 - With WorldGuard installed, mining rewards require the `jpprison-enchants` flag to be **defined** at the block: `ALLOW` pays, `DENY` blocks rewards, undefined pays nothing (and autosell is skipped).
 - The flag *instance* matters: WorldGuard keys regions by flag identity. Always fetch it through the API — a `new StateFlag("jpprison-enchants")` would always miss.
-- Live helpers with no reflection on your side: `JPPlugin.getWorldGuard()` exposes `hasFlagAt(location)`, `isDeniedAt(location)` and `queryFlagAt(location)`. The flag name constant is `WorldGuardHook.FLAG_NAME`.
+- Live helpers with no reflection on your side: `JPPlugin.getWorldGuard()` exposes `hasFlagAt(location)`, `isDeniedAt(location)` and `queryFlagAt(location)`.
 
 ## Zones — per-region rules (`zones.yml`)
 
@@ -127,16 +127,3 @@ double xp       = JPPrisonAPI.getZoneXpMultiplier(location);
 
 - `economy.vault-currency` in `config.yml` (default `money`) selects the ONE economy exposed through Vault; `none` disables the bridge.
 - Vault credits from external shops are **unboosted** by design — timed boosts only apply to mining income.
-
-## Where to look in the source
-
-| Package | Contents |
-|---|---|
-| `com.jpprison.economy` | `JPPrisonAPI`, `EconomyManager`, `EconomyCost`, `BalanceChangeEvent`, `VaultEconomy`. |
-| `com.jpprison.enchant` | `EnchantManager`, `EnchantData`, `BreakEnchantHandler`, `EnchantFx`, enchant prestige. |
-| `com.jpprison.menu` | `MenuManager`, `MenuController`, `MenuSession`, `MenuRenderer`, `MenuItemData`. |
-| `com.jpprison.zone` | `ZoneManager`, `ZoneData` — per-region rules. |
-| `com.jpprison.config` | `ConfigMigrator` — versioned migrations. |
-| `com.jpprison.storage` | SQLite layer (cache flushes, WAL, backups). |
-| `com.jpprison.util` | Cross-version helpers: `MaterialUtil`, `SoundUtil`, `EffectUtil`, `SkullUtil`, `TitleUtil`, `ColorUtil`... |
-| `com.jpprison.listener` | The single event pipeline hub where managers hook in. |

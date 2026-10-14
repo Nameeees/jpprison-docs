@@ -52,7 +52,7 @@ docs/                 all the content (Markdown)
   getting-started/    installation, quick start, configuration
   features.md         full system tour
   reference/          commands, placeholders
-  developer/          building, API, balance analysis
+  developer/          API for add-on developers
   tools/              enchant creator guide
   changelog.md        changelog
 .github/workflows/    automatic deployment to GitHub Pages
