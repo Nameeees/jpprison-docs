@@ -4,11 +4,13 @@
 #  Preview locally:   mkdocs serve    ->  http://127.0.0.1:8000
 #  Build the site:    mkdocs build    ->  site/
 #
-#  >>> PUBLISHING: replace "your-username" below (3 places) with
-#  >>> your GitHub user/repo once you create it, so the top-right
-#  >>> repo link and the "edit this page" buttons point to your repo.
-#  >>> NOTE: GitHub usernames cannot contain "_" - use your real
-#  >>> GitHub login there. "MrDriz_" is used only as the author credit.
+#  >>> PUBLISHING: the URLs below are set for the GitHub account
+#  >>> "Nameeees" and the repository "jpprison-docs", so the
+#  >>> top-right repo link and the "edit this page" buttons work.
+#  >>> If you rename the repo or move it to another account, update
+#  >>> the 3 URLs below and the git remote:
+#  >>>   git remote set-url origin https://github.com/<user>/<repo>.git
+#  >>> ("MrDriz_" in site_author / copyright is the author credit.)
 # ============================================================
 
 site_name: JPPrison Docs
@@ -16,10 +18,10 @@ site_author: MrDriz_
 site_description: >-
   All-in-one Prison core plugin for Spigot/Paper — enchanted pickaxes,
   custom economies, autosell, pets, minions, robots, crates and more.
-site_url: https://your-username.github.io/jpprison-docs/
+site_url: https://nameeees.github.io/jpprison-docs/
 
-repo_url: https://github.com/your-username/jpprison-docs
-repo_name: your-username/jpprison-docs
+repo_url: https://github.com/Nameeees/jpprison-docs
+repo_name: Nameeees/jpprison-docs
 edit_uri: edit/main/docs/
 
 copyright: JPPrison by MrDriz_ — Mine. Upgrade. Prestige. Repeat. Free with attribution, no resale.

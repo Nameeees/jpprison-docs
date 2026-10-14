@@ -17,21 +17,24 @@ Open <http://127.0.0.1:8000> — the site reloads live while you edit files in `
 
 ## Publish on GitHub Pages (free)
 
-1. Create a new **public** repository on GitHub (e.g. `jpprison-docs`).
-2. In `mkdocs.yml`, replace `your-username` (3 places: `site_url`, `repo_url`, `repo_name`).
-3. Push this folder:
+Everything is prepared for `https://github.com/Nameeees/jpprison-docs`: the site
+links in `mkdocs.yml` and the local `origin` remote already point there.
+
+1. Create the **public** repository `jpprison-docs` on the `Nameeees` account —
+   **without** adding a README, .gitignore or license (keep it completely empty).
+2. Push this folder:
 
    ```bash
-   git init
-   git add .
-   git commit -m "Initial documentation site"
-   git remote add origin https://github.com/<your-username>/jpprison-docs.git
    git push -u origin main
    ```
 
-4. In the repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-5. Done. Every push to `main` rebuilds and publishes the site at
-   `https://<your-username>.github.io/jpprison-docs/`.
+3. In the repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+4. Done. Every push to `main` rebuilds and publishes the site at
+   `https://nameeees.github.io/jpprison-docs/`.
+
+If you ever rename the repository or move it to another account, update the three
+URLs at the top of `mkdocs.yml` and the git remote
+(`git remote set-url origin https://github.com/<user>/<repo>.git`).
 
 ## Editing later
 
