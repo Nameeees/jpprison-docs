@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------------
+   JPPrison Docs — small style tweaks on top of MkDocs Material
+   ------------------------------------------------------------------ */
+
+/* Keep the dense reference tables readable */
+.md-typeset table:not([class]) {
+  font-size: 0.76rem;
+}
+
+/* Long placeholders / command names wrap instead of overflowing */
+.md-typeset code {
+  word-break: break-word;
+}
+
+/* Slightly wider content column on large screens (big tables) */
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 68rem;
+  }
+}

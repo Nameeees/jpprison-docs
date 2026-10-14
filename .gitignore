@@ -1,0 +1,12 @@
+# Built documentation output (rebuilt by GitHub Actions)
+site/
+
+# Python virtual environments / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db

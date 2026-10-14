@@ -1,0 +1,104 @@
+# ============================================================
+#  JPPrison Documentation — MkDocs Material configuration
+# ============================================================
+#  Preview locally:   mkdocs serve    ->  http://127.0.0.1:8000
+#  Build the site:    mkdocs build    ->  site/
+#
+#  >>> PUBLISHING: replace "your-username" below (3 places) with
+#  >>> your GitHub user/repo once you create it, so the top-right
+#  >>> repo link and the "edit this page" buttons point to your repo.
+# ============================================================
+
+site_name: JPPrison Docs
+site_description: >-
+  All-in-one Prison core plugin for Spigot/Paper — enchanted pickaxes,
+  custom economies, autosell, pets, minions, robots, crates and more.
+site_url: https://your-username.github.io/jpprison-docs/
+
+repo_url: https://github.com/your-username/jpprison-docs
+repo_name: your-username/jpprison-docs
+edit_uri: edit/main/docs/
+
+copyright: JPPrison — Mine. Upgrade. Prestige. Repeat. Free with attribution, no resale.
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - assets/extra.css
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+      - Configuration: getting-started/configuration.md
+  - Features:
+      - Overview: features.md
+      - Enchant Creator: tools/enchant-creator.md
+  - Reference:
+      - Commands: reference/commands.md
+      - Placeholders: reference/placeholders.md
+  - Developer:
+      - Building & Development: developer/building.md
+      - API: developer/api.md
+      - Balance Analysis: developer/balance.md
+  - Changelog: changelog.md

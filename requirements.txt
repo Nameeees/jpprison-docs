@@ -1,0 +1,3 @@
+# Python dependencies used to build the documentation site.
+# Install with:  py -m pip install -r requirements.txt
+mkdocs-material>=9.5,<10
