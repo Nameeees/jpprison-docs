@@ -73,7 +73,7 @@ You never need to delete a config to "get the new options": update the jar, run 
 | `features` | The master switches above. |
 | `backups` | `interval-hours`, `keep`, `on-start`. |
 | `update-checker` | Console update check (`enabled`, `url`, `interval-hours`) — off by default. |
-| `bstats` | bStats metrics (`enabled`, `plugin-id`) — off by default. |
+| `bstats` | bStats metrics (`enabled`, `plugin-id`) — enabled by default with the project's own plugin id; opt out here or globally in `plugins/bStats/config.yml`. |
 | `debug` | Verbose logging for troubleshooting placeholders and integrations. |
 
 ## Reloading
