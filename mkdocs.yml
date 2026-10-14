@@ -36,12 +36,18 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.indexes
     - navigation.footer
+    - navigation.path
+    - navigation.instant
+    - navigation.instant.progress
     - search.suggest
     - search.highlight
+    - search.share
+    - content.action.edit
     - content.code.copy
     - content.code.annotate
     - toc.follow
@@ -79,6 +85,10 @@ extra_css:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Nameeees/jpprison-docs
+      name: Documentation repository
 
 nav:
   - Home: index.md
