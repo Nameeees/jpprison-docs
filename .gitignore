@@ -10,3 +10,6 @@ __pycache__/
 # OS noise
 .DS_Store
 Thumbs.db
+
+# Local screenshots (kept out of the public repo; root-level only)
+/Captura de pantalla*.png

@@ -7,9 +7,12 @@
 #  >>> PUBLISHING: replace "your-username" below (3 places) with
 #  >>> your GitHub user/repo once you create it, so the top-right
 #  >>> repo link and the "edit this page" buttons point to your repo.
+#  >>> NOTE: GitHub usernames cannot contain "_" - use your real
+#  >>> GitHub login there. "MrDriz_" is used only as the author credit.
 # ============================================================
 
 site_name: JPPrison Docs
+site_author: MrDriz_
 site_description: >-
   All-in-one Prison core plugin for Spigot/Paper — enchanted pickaxes,
   custom economies, autosell, pets, minions, robots, crates and more.
@@ -19,7 +22,7 @@ repo_url: https://github.com/your-username/jpprison-docs
 repo_name: your-username/jpprison-docs
 edit_uri: edit/main/docs/
 
-copyright: JPPrison — Mine. Upgrade. Prestige. Repeat. Free with attribution, no resale.
+copyright: JPPrison by MrDriz_ — Mine. Upgrade. Prestige. Repeat. Free with attribution, no resale.
 
 theme:
   name: material

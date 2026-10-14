@@ -79,4 +79,4 @@ Optional integrations: **WorldGuard** 6.x/7.x+ (the `jpprison-enchants` region f
 
 ## Support & license
 
-JPPrison is licensed **free with attribution, no resale**: you may use, modify and redistribute it (including on public and for-profit servers) as long as you keep the credit, and you may not sell the plugin or modified versions. Bundled third-party components keep their own licenses: XSeries (MIT), sqlite-jdbc (Apache-2.0) and bStats (MIT).
+JPPrison is developed by **MrDriz_** and licensed **free with attribution, no resale**: you may use, modify and redistribute it (including on public and for-profit servers) as long as you keep the credit, and you may not sell the plugin or modified versions. Bundled third-party components keep their own licenses: XSeries (MIT), sqlite-jdbc (Apache-2.0) and bStats (MIT).
